@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theater NOC Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Theater NOC Board</h1>
+    <div class="view-buttons">
+        <button id="view1-button">View 1: Device List</button>
+        <button id="view2-button">View 2: Device Details</button>
+    </div>
+</header>
+<div class="container">
+    <aside>
+        <h2>Devices</h2>
+        <ul id="device-list">
+            <!-- Device list will be populated here -->
+        </ul>
+        <button id="add-device" class="add-device">➕ Add Device</button>
+    </aside>
+    <main>
+        <div class="view view1" id="view1">
+            <h2>Device List</h2>
+            <div class="status-boxes" id="status-boxes">
+                <!-- Status boxes for all devices will be populated here -->
+            </div>
+        </div>
+        <div class="view view2" id="view2">
+            <div class="device-details" id="device-details">
+                <!-- Detailed view for a single device will be populated here -->
+            </div>
+            <div class="notifications" id="notifications">
+                <h2>Notifications</h2>
+                <ul id="notification-list">
+                    <!-- Notifications will be populated here -->
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Add Device Modal -->
+<div id="add-device-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-add-device-modal">&times;</span>
+        <h2>Add Device</h2>
+        <form id="add-device-form">
+            <label for="device-alias">Alias</label>
+            <input type="text" id="device-alias" name="alias" required>
+            <label for="device-ip">IP Address</label>
+            <input type="text" id="device-ip" name="ip" required>
+            <label for="device-port">Port</label>
+            <input type="number" id="device-port" name="port" required>
+            <label for="device-username">Username</label>
+            <input type="text" id="device-username" name="username" required>
+            <label for="device-password">Password</label>
+            <input type="password" id="device-password" name="password" required>
+            <button type="submit">Add Device</button>
+        </form>
+    </div>
+</div>
+
+<!-- Edit Device Modal -->
+<div id="edit-device-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-edit-device-modal">&times;</span>
+        <h2>Edit Device</h2>
+        <form id="edit-device-form">
+            <label for="edit-device-alias">Alias</label>
+            <input type="text" id="edit-device-alias" name="alias" required>
+            <label for="edit-device-ip">IP Address</label>
+            <input type="text" id="edit-device-ip" name="ip" required>
+            <label for="edit-device-port">Port</label>
+            <input type="number" id="edit-device-port" name="port" required>
+            <label for="edit-device-username">Username</label>
+            <input type="text" id="edit-device-username" name="username" required>
+            <label for="edit-device-password">Password</label>
+            <input type="password" id="edit-device-password" name="password" required>
+            <button type="submit">Edit Device</button>
+        </form>
+    </div>
+</div>
+
+<!-- Delete Device Modal -->
+<div id="delete-device-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-delete-device-modal">&times;</span>
+        <h2>Delete Device</h2>
+        <p>Are you sure you want to delete this device?</p>
+        <button id="confirm-delete-device">Delete Device</button>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
